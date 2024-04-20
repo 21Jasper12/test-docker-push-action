@@ -27,11 +27,11 @@ jobs:
         uses: docker/setup-qemu-action@v3
       -
         name: Set up Docker Buildx
-        id: buildx
+        # id: buildx
         uses: docker/setup-buildx-action@v3
       -
         name: Available platforms
-        run: echo ${{steps.buildx.outputs.pla}}
+        run: echo ${{ steps.buildx.outputs.platforms }}
       # -
       #   name: Login to Docker Hub
       #   uses: docker/login-action@v3
